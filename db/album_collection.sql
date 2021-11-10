@@ -6,8 +6,10 @@ CREATE TABLE artists (
     artist_name VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE album (
+CREATE TABLE albums (
     id SERIAL PRIMARY KEY,
-    album_name VARCHAR(255) NOT NULL
-    artist_id INT REFERENCES artists(id)
+    album_name VARCHAR(255) NOT NULL,
+    artist_id INT REFERENCES artists(id),
+    genre VARCHAR(255) NOT NULL
 );
+
